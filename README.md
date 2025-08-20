@@ -1,4 +1,4 @@
-![Alura Store](https://github.com/user-attachments/assets/8582e75a-9d34-432c-9fa4-627fd9737c30)
+![Telecom X2](https://github.com/user-attachments/assets/f6f7bf69-69db-4251-8282-f7ec8998de79)
 <hr>
 
 <p align="center">
