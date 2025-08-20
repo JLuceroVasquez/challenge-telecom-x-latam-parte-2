@@ -2,7 +2,7 @@
 <hr>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Estado-En Proceso-blue">
+  <img src="https://img.shields.io/badge/Estado-Finalizado-blue">
   <img src="https://img.shields.io/badge/Licencia-MIT License-orange">
 </p>
 
@@ -16,33 +16,40 @@
 ## :computer: Descripción del proyecto
 <p align="justify">
 Respositorio correspondiente al tercer challenge de la especialidad de Ciencia de Datos del programa One de Alura Latam y Oracle.
-La empresa TelecomX enfrenta una alta tasa de cancelaciones y necesita comprender los factores que llevan a la pérdida de clientes. En este desafío se recopiló, procesó y analizó los datos, utilizando Python y sus principales bibliotecas para extraer información valiosa. A partir del trabajó realizado, se respondió a la pregunta ¿Que variables cuantitativas y cualitativas se relación con la decisión del cliente de dejar la empresa?,y generó un insumo para que la empresa pueda realizar modelos predictivos que ayude a desarrollar estrategias para reducir la evasión de clientes.
+  
+Tras realizar el anáisis de los factores que llevan a la pérdida de clientes en la empresa TelecomX, se solicitó la elaboración de un modelo de clasificación capaz de predecir si un cliente cancelará o no el servicio contratado. En este desafío se realiza el feature engineering, entrenamiento y selección de modelos, selección de características y optimización de hiperparámetros, utilizando Python y sus principales bibliotecas para producir un modelo que obtuvo un recall de 89.84%. A partir del trabajó realizado, se respondió a la preguntas ¿Que factores son importantes al predecir si un cliente dejará la empresa?,y generó un modelo predictivo que permita a la empresa desarrollar estrategias para reducir la pérdida de cientes
 
-El análisis se realizó como reto de la formación "Modelado de datos con Python" del Programa ONE edición 8 de Alura Latam y Oracle.
+El análisis se realizó como reto de la formación "Estadística y Machine Learning" del Programa ONE edición 8 de Alura Latam y Oracle.
 </p>
 
-## :hammer: Gráficos y métricas
-:heavy_check_mark: `Gráficos de barras:` Muestran el recuento de cancelaciones por variables cualitativas como género, método de pago y tipo de contrato.
+## :hammer: Pipeline del modelo ML
+:heavy_check_mark: `Preparación de los datos:` Se realizó la eliminación de variables irrelevantes y transformación OneHot de las variables categóricas.
 
-:heavy_check_mark: `Gráficos de líneas:` Representan la comparación de la probabilidad de evasión de clientes, probablemente por variables sociodemográficas y del negocio.
+:heavy_check_mark: `Correlación y selección de variables:` Se realizó un análisis de correlación y del factor de inflación de la varianza que permitió la selección de variables más correlacionadas con la cancelación del servicio, y que no producen multicolinealidad.
 
-:heavy_check_mark: `Gráficos de cajas y bigotes (boxplots):` Se utilizaron para analizar la distribución de los valores numéricos en relación con la cancelación del servicio (Churn).
+:heavy_check_mark: `Comparación de modelos predictivos:` Se comparó tres modelos ML para la clasificación de clientes en quienes hacen y no hacen Churn. La métrica más importante fue recall, pues nos interesa predecir quiénes son los clientes que cancelarán el servicio (clase positiva). Se halló que el modelo de Regresión Logística produce los mejores resultados, y se probó que el método SMOTTENN permite al modelo ML indentificar mejor los patrones de los datos durante un entrenamiento con clases balanceadas. 
 
-:heavy_check_mark: `Gráficos de dispersión:` Se graficó la relación entre variables como meses de permanencia en la empresa, cobro diario al cliente y cantidad de servicios contratados con la probabilidad de cancelación del servicio (Churn).
+:heavy_check_mark: `Optimización del modelo escogido:` Se analizó la importancia total de la permutación de las variables predictoras y escogió las nueve que producían mejoras significativas en el recall.
 
-:heavy_check_mark: `Métricas de correlación:` Se calculó el coeficiente de correlación de Pearson entre tres variables numéricas y la probabilidad de cancelación del servicio (Churn).
+:heavy_check_mark: `Optimización de hiperparámetros:` Tras la selección de caterísticas, se probó las combinaciones de 4 hiperparámetros del modelo de Regresión Logística teniendo cada uno 3 posibles valores. GridSearchCV encontró la mejor combinación de hiperparámetros y se evaluó el predictor con el conjunto de prueba obteniendo un recall de 89,84%.
+
+:heavy_check_mark: `Esportación del modelo campeón:` Con la biblioteca pickle, se exportó el predictor campeón y el transformador OneHot para su uso posterior.
 
 ## :unlock: Acceso al proyecto
-Puedes acceder al repositorio GitHub del proyecto haciendo [click aquí](https://github.com/JLuceroVasquez/challenge-telecom-x-latam).
+Puedes acceder al repositorio GitHub del proyecto haciendo [click aquí](https://github.com/JLuceroVasquez/challenge-telecom-x-latam-parte-2).
 
 En el repositorio, se puede abrir el cuaderno de Jupyter en Google Colab haciendo click en el badge de color azul que está al principio.
 
 ## :briefcase: Tecnologías usadas
 - Pyhton
 - Pandas
+- Numpy
 - Maplotlib
 - Seaborn
-- Plotly
+- Scikit-Learn
+- Imbalanced-Learn
+- Statsmodels
+- Pickle
 
 ## :bowtie: Desarrollador
 |[<img src="https://avatars.githubusercontent.com/u/176303607?v=4" width=115> <br> <sub>Jimmy Octavio Lucero Vasquez</sub>](https://github.com/JLuceroVasquez)|
