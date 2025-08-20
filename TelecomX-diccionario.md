@@ -1,5 +1,5 @@
 #### Diccionario de datos
-El presente diccionario incluye la definición de todas las columnas consideradas en dataset original. Aquellas empleadas en el entrenamiento, validación y prueba del modelo de Aprendizaje Automático contienen el texto `ML` entre paréntesis al final de su nombre.
+El presente diccionario incluye la definición de todas las columnas consideradas en dataset original.
 
 - `customerID`: número de identificación único de cada cliente.
 - `Churn`: si el cliente dejó o no la empresa.
