@@ -8,7 +8,7 @@
 
 ### Índice
 - [Descripción del proyecto](#computer-descripción-del-proyecto)
-- [Gráficos y métricas](#hammer-gráficos-y-métricas)
+- [Pipeline del modelo ML](#hammer-pipeline-del-modelo-ML)
 - [Acceso al proyecto](#unlock-acceso-al-proyecto)
 - [Tecnologías usadas](#briefcase-tecnologías-usadas)
 - [Desarrollador](#bowtie-desarrollador)
